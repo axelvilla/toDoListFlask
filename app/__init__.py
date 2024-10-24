@@ -9,7 +9,7 @@ def create_app():
     app.config.from_mapping(
         DEBUG = True,
         SECRET_KEY = 'dev',
-        SQLALCHEMY_DATABASE_URI = "mysql://root:1234@127.0.0.1:3306/todoapp"
+        SQLALCHEMY_DATABASE_URI = "sqlite:///todolist.db"
     )
 
     db.init_app(app)
