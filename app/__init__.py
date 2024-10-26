@@ -7,7 +7,7 @@ def create_app():
     app = Flask(__name__)
 
     app.config.from_mapping(
-        DEBUG = True,
+        DEBUG = False,
         SECRET_KEY = 'dev',
         SQLALCHEMY_DATABASE_URI = "sqlite:///todolist.db"
     )
