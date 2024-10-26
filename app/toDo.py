@@ -46,7 +46,7 @@ def update(id):
     if request.method == 'POST':
         
         todo.title = request.form['title']
-        todo.desc = request.form['desc']
+        todo.descrip = request.form['desc']
         todo.state = True if request.form.get('state') == 'on' else False
 
 

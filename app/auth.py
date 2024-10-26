@@ -44,7 +44,7 @@ def login():
         user = User.query.filter_by(username = username).first()
 
         if user == None or not check_password_hash(user.password, password):
-            error = 'El nombre de usuario o la contrasenia es incorrecta'
+            error = 'El nombre de usuario o la contraseña es incorrecta'
         
         if error is None:
             session.clear()
