@@ -3,7 +3,14 @@
 {% block title %} Inicio {% endblock %}
 
 {% block content %}
-    
+    {% if g.user %}
+
+    <div class="container text-center mt-5 pt-5">
+        <h2 class="">Inicio de sesion exitoso</h2>
+        <a href="{{url_for('todo.index')}}" class="btn btn-primary">Ir a mis tareas</a>
+    </div>
+    {% else %}
+
     <div class="container-sm text-center mt-5">
         <h1 class="display-3">Bienvenido mi aplicacion de lista de tareas</h1>
         <p class="lead">En esta aplicacion podes llevar todas las listas de tareas que tengas por realizar</p>
@@ -16,4 +23,7 @@
 
         </div>
     </div>
+
+    {% endif %}
+    
 {% endblock %}
